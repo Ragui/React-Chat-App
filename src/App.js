@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FriendsList from './components/friendsList'
+import Login from './components/login'
+import ChatBox from './components/chatBox'
+
+import "bootstrap/dist/css/bootstrap.min.css"
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="children">
+      <Login />
+      <div className="my-flex mb-3">
+        <div className="d-flex justify-content-between children">
+          <FriendsList />
+          <ChatBox />
+        </div>
+      </div>
     </div>
   );
 }
+
+/*
+ */
 
 export default App;
